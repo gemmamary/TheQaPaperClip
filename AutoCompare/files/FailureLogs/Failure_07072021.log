@@ -1,0 +1,4 @@
+﻿Failure: 7/7/2021 3:03:08 PM TestCaseForBugToBeFixedToday_TC001
+Failure: 7/7/2021 3:06:37 PM TestCaseForBugToBeFixedToday_TC002
+Failure: 7/7/2021 4:48:40 PM TestCaseForReoccurringBug_TC007
+Failure: 7/7/2021 4:49:00 PM FlakyTestCase_TC009
