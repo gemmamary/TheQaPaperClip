@@ -8,7 +8,11 @@ namespace AutoCompare
     public class FailedTests
     {
 
-        // Returns the Test Case Names of all failed test cases in a given log
+        /// <summary>
+        /// Gets the full names of the failed test cases in a log
+        /// </summary>
+        /// <param name="failureLog">The log to retrieve test case names from</param>
+        /// <returns>A list of Failed Test Case names</returns>
         public static List<string> GetFailedTestCaseNames(string failureLog)
         {
             IEnumerable<string> failures = File.ReadLines(failureLog);
@@ -17,7 +21,11 @@ namespace AutoCompare
                     select failure[29..]).ToList();
         }
 
-        // Returns the Test Case IDs of all failed test cases in a given log
+        /// <summary>
+        /// Gets the IDs of the failed test cases in a log
+        /// </summary>
+        /// <param name="failureLog">The log to retrieve test case IDs from</param>
+        /// <returns>A list of Failed Test Case IDs</returns>
         public static List<string> GetFailedTestCaseIds(string failureLog)
         {
             IEnumerable<string> failures = File.ReadLines(failureLog);
@@ -27,7 +35,11 @@ namespace AutoCompare
                     select failure[idIndex..]).ToList();
         }
 
-        // Returns the number of failed test cases in a given log
+        /// <summary>
+        /// Get the number of failed test cases given in a log
+        /// </summary>
+        /// <param name="failureLog">The log to count failures from</param>
+        /// <returns>The number of failures in a failure log</returns>
         public static int GetFailedTestCaseCount(string failureLog)
         {
             IEnumerable<string> failures = File.ReadLines(failureLog);

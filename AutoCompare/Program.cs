@@ -10,12 +10,12 @@ namespace AutoCompare
         static void Main(string[] args)
         {
             // Change these variables to the dates in the file names you want to compare
-            var previous = "05072021";
-            var latest = "06072021";
-
+            var previous = "07072021";
+            var latest = "08072021";
+                               
             // Gets the path to the Failure Logs folder
             var failureLogsFolderPath = GetFailureLogsFolderPath();
-
+           
             // Gets the two logs to compare
             string latestLog = GetFailureLogFromDate(failureLogsFolderPath, latest);
             string previousLog = GetFailureLogFromDate(failureLogsFolderPath, previous);

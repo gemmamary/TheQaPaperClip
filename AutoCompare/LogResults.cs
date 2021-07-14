@@ -6,6 +6,11 @@ namespace AutoCompare
 {
     public static class LogResults
     {
+        /// <summary>
+        /// Outputs a list of results to the console
+        /// </summary>
+        /// <param name="description">The description of the results being written to the console</param>
+        /// <param name="results">The list of results to be written to the console</param>
         public static void OutputResultsListToConsole(string description, List<string> results)
         {
             Console.WriteLine(description);
@@ -15,9 +20,15 @@ namespace AutoCompare
             }
         }
 
-        public static void OutputResultsToConsole(bool isTrue, string messageForTrue, string messageForFalse)
+        /// <summary>
+        /// Outputs a message to the console based on a condition
+        /// </summary>
+        /// <param name="condition">Takes either true or false</param>
+        /// <param name="messageForTrue">The message to be written to the console if the condition is true</param>
+        /// <param name="messageForFalse">The message to be written to the console if the condition is false</param>
+        public static void OutputResultsToConsole(bool condition, string messageForTrue, string messageForFalse)
         {
-            if (isTrue)
+            if (condition)
             {
                 Console.WriteLine(messageForTrue);
             }
