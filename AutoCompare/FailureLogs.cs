@@ -32,5 +32,29 @@ namespace AutoCompare
             return $"{dir.Substring(0, i)}{logsPath}";
 
         }
+
+        /// <summary>
+        /// Get the latest file in the specified directory
+        /// </summary>
+        /// <param name="root">The directory to get the latest file from</param>
+        /// <returns>The full file path of the latest file in the directory</returns>
+        public static string GetLatestFailureLog(string root)
+        {
+            var latest = new DirectoryInfo(root).GetFiles().OrderByDescending(x => x.LastWriteTimeUtc).First();
+
+            return latest.FullName;
+        }
+
+        /// <summary>
+        /// Gets the second to last file in the specified directory
+        /// </summary>
+        /// <param name="root">The directory to get the second to last file from</param>
+        /// <returns>The full file path of the second to last file in the directory</returns>
+        public static string GetSecondToLastFailureLog(string root)
+        {
+            var previous = new DirectoryInfo(root).GetFiles().OrderByDescending(x => x.LastWriteTimeUtc).ElementAt(1);
+
+            return previous.FullName;
+        }
     }
 }

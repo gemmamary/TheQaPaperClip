@@ -29,7 +29,8 @@ namespace AutoCompare
         }
 
         /// <summary>
-        /// Gets test case IDs of failures that are in the latest failure log, but not the previous failure log and writes the results to the console
+        /// Gets test case IDs of failures that are in the latest failure log but not the previous failure log. 
+        /// Writes the results to the console
         /// </summary>
         /// <param name="latestFailureLog">The latest failure log</param>
         /// <param name="previousFailureLog">The previous failure log</param>
@@ -48,7 +49,8 @@ namespace AutoCompare
         }
 
         /// <summary>
-        /// Gets Test Case IDs of failures that are in the previous failure log, but not the latest and writes the results to the console
+        /// Gets Test Case IDs of failures that are in the previous failure log but not the latest.
+        /// Writes the results to the console.
         /// </summary>
         /// <param name="latestFailureLog">The latest failure log</param>
         /// <param name="previousFailureLog">The previous failure log</param>

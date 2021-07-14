@@ -8,17 +8,14 @@ namespace AutoCompare
     public class Program
     {
         static void Main(string[] args)
-        {
-            // Change these variables to the dates in the file names you want to compare
-            var previous = "07072021";
-            var latest = "08072021";
-                               
+        {                               
             // Gets the path to the Failure Logs folder
             var failureLogsFolderPath = GetFailureLogsFolderPath();
            
-            // Gets the two logs to compare
-            string latestLog = GetFailureLogFromDate(failureLogsFolderPath, latest);
-            string previousLog = GetFailureLogFromDate(failureLogsFolderPath, previous);
+            // Gets the two latest logs in the directory based on when they were written to last.
+            // If an older log is written to after new log(s) have been added, results may be inaccurate 
+            string latestLog = GetLatestFailureLog(failureLogsFolderPath);
+            string previousLog = GetSecondToLastFailureLog(failureLogsFolderPath);
 
             // Checks whether the two logs are the same or different
             AreTestFailuresDifferent(latestLog, previousLog);
